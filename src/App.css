@@ -1,38 +1,76 @@
-.App {
+body {
+  padding-left: 10px;
+  padding-right: 20px;
+  background-color: aliceblue;
+  background-image: url(../src/assets/imgs/background.jpeg);
+}
+.app-name {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.search-div {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-box {
+  border: none;
+  box-shadow: 5px 5px rgb(162, 162, 162);
+  width: 50%;
+  padding-left: 5px;
+  height: 46px;
+  font-size: larger;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-btn {
+  border: none;
+  box-shadow: 1px 1px 2px 2px rgb(166, 164, 164);
+  background-color: aliceblue;
+  padding: 11px 20px;
+  font-weight: bolder;
+  margin-left: 20px;
+  color: rgb(190, 209, 23);
+  border-radius: 18px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.search-btn:hover {
+  background-color: rgb(190, 209, 23);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1em;
+  margin-top: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hide {
+  display: none;
+}
+.emoji-div {
+  position: relative;
+  display: flex;
+  box-shadow: 2px 2px 2px 2px rgb(208, 207, 207);
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+}
+.emoji-div:hover {
+  background-color: rgb(218, 216, 216);
+  cursor: pointer;
+}
+.emoji-div:hover .hide {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  display: block;
+  color: rgb(163, 162, 162);
+}
+.emoji-picture {
+  padding-top: 10px;
+  font-size: 40px;
+}
+.emoji-name {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.emoji-box {
+  background-color: green;
 }
