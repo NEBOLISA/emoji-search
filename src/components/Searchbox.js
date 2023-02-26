@@ -30,23 +30,7 @@ function Searchbox() {
       setData(valueHolder);
     }
   };
-  let handleSubmit = () => {
-    if (search !== "") {
-      let url =
-        "https://emoji-api.com/emojis?search=" +
-        search +
-        "&access_key=60f8517f434747a32430aa08724df6b274a01d70";
-      fetch(url)
-        .then((res) => res.json())
-        .then((res) => {
-          if (res) {
-            setData(res);
-          } else {
-            setData([]);
-          }
-        });
-    }
-  };
+
   return (
     <div>
       <div className="search-div">
@@ -57,9 +41,6 @@ function Searchbox() {
           value={search}
           onChange={(e) => handleSearch(e)}
         />
-        <button className="search-btn" onClick={() => handleSubmit()}>
-          Search
-        </button>
       </div>
 
       <Emojibox emojiValue={data} />
